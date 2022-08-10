@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-color: bisque;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 80px;
+  color: red;
+  text-align: center;
+}
+
+main {
+  height: 70vh;
+  background-color: aliceblue;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: bisque;
+}
