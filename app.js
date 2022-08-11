@@ -51,21 +51,20 @@ for (let i = 0; i < 3; i++) {
 let rating = prompt("How many stars out of 5 do yo rate our page?\n");
 let stars = "";
 
-console.log("How many stars out of 5 do yo rate our page?\n"); {
+console.log("How many stars out of 5 do yo rate our page?\n");
 
-    if (0 <= rating < 6 && !isNaN(rating)) {
-        for (let i = 0; i < rating; i++) {
-            stars = stars + "★";
-        }
+if (0 <= rating < 6 && !isNaN(rating)) {
+    for (let i = 0; i < rating; i++) {
+        stars = stars + "★";
     }
-
-    else if (6 <= rating && !isNaN(rating)) {
-
-        stars = "★★★★★";
-    }
-    else {
-        console.log("you entered an invalid number");
-    }
-
-    console.log(stars);
 }
+
+if (6 <= rating && !isNaN(rating)) {
+
+    stars = "★★★★★";
+}
+else {
+    console.log("you entered an invalid number");
+}
+
+console.log(stars);
