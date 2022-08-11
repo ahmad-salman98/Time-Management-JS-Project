@@ -4,20 +4,20 @@ const gender = prompt("Please enter your gender", "male or female");
 let age = prompt("Please enter your age");
 
 
-while (age <= 0) {
+while (age <= 0 || age > 120 || isNaN(age)) {
     alert("Please enter a valid age");
     age = prompt("Please enter your age");
 }
 if (confirm("Do you want to receive welcoming message?")) {
     if (gender == "male") {
-        alert("Welcome Mr " + name + ", glad to see you here ");
+        alert("Welcome Mr " + name + ", glad to see you here ^-^ ");
     }
     else if (gender == "female") {
-        alert("Welcome Ms " + name + ", glad to see you here ");
+        alert("Welcome Ms " + name + ", glad to see you here ^-^   ");
 
     }
     else {
-        alert("Welcome " + name + ", glad to see you here ");
+        alert("Welcome " + name + ", glad to see you here ^-^ ");
 
     }
 }
@@ -51,19 +51,21 @@ for (let i = 0; i < 3; i++) {
 let rating = prompt("How many stars out of 5 do yo rate our page?\n");
 let stars = "";
 
-if (0 <= rating < 6) {
-    for (let i = 0; i < rating; i++) {
-        stars = stars + "★";
+console.log("How many stars out of 5 do yo rate our page?\n"); {
+
+    if (0 <= rating < 6 && !isNaN(rating)) {
+        for (let i = 0; i < rating; i++) {
+            stars = stars + "★";
+        }
     }
-}
 
-else if (6 <= rating) {
+    else if (6 <= rating && !isNaN(rating)) {
 
-    stars = "★★★★★";
-}
-else {
-    console.log("you entered an invalid number");
-}
+        stars = "★★★★★";
+    }
+    else {
+        console.log("you entered an invalid number");
+    }
 
-console.log("How many stars out of 5 do yo rate our page?\n");
-console.log(stars);
+    console.log(stars);
+}
